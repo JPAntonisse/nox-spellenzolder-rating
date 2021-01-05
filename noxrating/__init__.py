@@ -1,0 +1,3 @@
+"""
+NoxRating Main Logic
+"""

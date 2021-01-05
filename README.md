@@ -1,6 +1,6 @@
 <p align="center">
-  # NOX Spellenzolder - Scoring Extractor
-  Extract boardgames scoring from Nox Youtube Videos.
+  <h1>NOX Spellenzolder - Scoring Extractor</h1>
+  <span>Extract boardgames scoring from Nox Youtube Videos.</span>
 </p>
 <p align="center">
   <a href="#installation">Installation</a>

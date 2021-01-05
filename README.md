@@ -14,6 +14,9 @@
 # clone the repo
 $ git clone https://github.com/JPAntonisse/nox-spellenzolder-rating.git
 
+# change the working directory to sherlock
+$ cd noxrating
+
 # install the requirements
 $ python3 -m pip install -r requirements.txt
 ```

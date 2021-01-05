@@ -39,8 +39,11 @@ $ cd noxrating
 $ python3 -m pip install -r requirements.txt
 ```
 
+
 ## Usage
 
 ```console
 $ python3 noxrating --api-key {YOUTUBE_API_KEY}
 ```
+
+Go <a href="https://developers.google.com/youtube/v3/getting-started" target="_blank">here</a> to get a Youtube API key

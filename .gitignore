@@ -14,7 +14,7 @@ __pycache__/
 # Pip
 src/
 
-# Jupyter Notebook
+# Jupyter Notebookp
 .ipynb_checkpoints
 *.ipynb
 

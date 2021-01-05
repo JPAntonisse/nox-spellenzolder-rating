@@ -21,5 +21,5 @@ $ python3 -m pip install -r requirements.txt
 ## Usage
 
 ```console
-$ python3 noxrating --api {YOUTUBE API KEY}
+$ python3 noxrating --api_key {YOUTUBE_API_KEY}
 ```

@@ -32,7 +32,7 @@ The scoring of Nox' boardgames will be shortly available on another Github Repo 
 # clone the repo
 $ git clone https://github.com/JPAntonisse/nox-spellenzolder-rating.git
 
-# change the working directory to sherlock
+# change the working directory to noxrating
 $ cd noxrating
 
 # install the requirements

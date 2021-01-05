@@ -1,11 +1,7 @@
-<p align="center">
-  <h1>NOX Spellenzolder - Scoring Extractor</h1>
-  <span>Extract boardgames scoring from Nox Youtube Videos.</span>
-</p>
-
 
 <p align="center">
-<img src="./images/preview.png"/>
+<img src="./images/preview.png"/> <br />
+<span>Extract boardgames scoring from Nox Youtube Videos.</span>
 </p>
 
 <p align="center">
@@ -13,6 +9,22 @@
   &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#usage">Usage</a>
 </p>
+
+## About
+
+<a href="https://www.youtube.com/channel/UCtzMObnv92ni0T_8CHGtDag" target="_BLANK">Nox' Spellenzolder</a> is a Dutch Youtuber giving reviews of boardgames and scoring them. Until now there is no way of getting a list of all scores and ranking. On special occations Nox' does a Top-50, but that's it.
+
+This Python application gathers information about the boardgame and Nox' scores and saves the output as .csv. With the following header:
+
+```code
+title;link;id;stars;score
+```
+
+
+## Dataset
+The scoring of Nox' boardgames will be shortly available on another Github Repo as a dataset in csv format.
+
+
 
 ## Installation
 

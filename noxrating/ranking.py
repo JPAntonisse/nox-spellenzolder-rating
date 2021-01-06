@@ -31,7 +31,6 @@ class Ranking:
 
         # Known faults in subtitles mechanics
         'zever': '7',
-        'older': '7',
     }
 
     def classify_ranking(self, captions, upload):
@@ -51,10 +50,6 @@ class Ranking:
         if 'sterren' in caption and score * 2 <= 10:
             upload['score'] = score * 2
             upload['stars'] = score
-            # return {
-            #     'stars': score,
-            #     'score':
-            # }
         else:
             upload['score'] = score
 
@@ -89,8 +84,9 @@ class Ranking:
 if __name__ == "__main__":
     from youtube_transcript_api import YouTubeTranscriptApi
 
-    test_id = 'NIAW7y_lNY0'
+    test_id = 'ycqrJy2988c'
     captions = YouTubeTranscriptApi.get_transcript(test_id, ['nl'])
+
     caption = ' '.join([elem['text'] for elem in captions])
 
     ranking = Ranking()

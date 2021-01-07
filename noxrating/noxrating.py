@@ -175,7 +175,7 @@ class DataExport:
         :param data:
         """
         try:
-            with open('dataset.csv', 'w', encoding="utf-8") as csvfile:
+            with open('noxrating.csv', 'w', encoding="utf-8") as csvfile:
                 writer = csv.DictWriter(csvfile, delimiter=';', fieldnames=self.csv_columns, lineterminator='\n')
                 writer.writeheader()
                 for data in data:

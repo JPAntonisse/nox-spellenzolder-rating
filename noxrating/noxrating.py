@@ -4,6 +4,7 @@ from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
 from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from progress.bar import Bar
+from datetime import datetime
 import colorful as cf
 import pickle
 import csv
@@ -85,11 +86,14 @@ Spellenzolder - Rating Extractor
             playlistitems_list_response = playlistitems_list_request.execute()
 
             for playlist_item in playlistitems_list_response['items']:
+                publish_date = playlist_item['snippet']['publishedAt']
+
                 videos.append({
                     'title': playlist_item['snippet']['title'],
                     'link': 'https://www.youtube.com/watch?v={}'.format(
                         playlist_item['snippet']['resourceId']['videoId']),
-                    'id': playlist_item['snippet']['resourceId']['videoId']
+                    'id': playlist_item['snippet']['resourceId']['videoId'],
+                    'date': datetime.strptime(publish_date, '%Y-%m-%dT%H:%M:%SZ').strftime("%d-%m-%Y"),
                 })
             playlistitems_list_request = self.youtube.playlistItems().list_next(
                 playlistitems_list_request, playlistitems_list_response)
@@ -144,7 +148,7 @@ Spellenzolder - Rating Extractor
         self.print('{} videos found, processing captions for score.'.format(len(uploads)))
 
         # Download Captions and Rank the captions
-        if self.export.exist('uploads') and not self.ignore_cache:
+        if self.export.exist('scored_videos') and not self.ignore_cache:
             scored_videos = self.export.load('scored_videos')
         else:
             scored_videos = self.captions(uploads)
@@ -163,7 +167,7 @@ class DataExport:
     and writing the pickle files.
     """
 
-    csv_columns = ['title', 'link', 'id', 'stars', 'score']
+    csv_columns = ['title', 'link', 'id', 'stars', 'score', 'date']
 
     def csv(self, data):
         """

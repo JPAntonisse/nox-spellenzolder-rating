@@ -12,12 +12,12 @@
 
 ## About
 
-<a href="https://www.youtube.com/channel/UCtzMObnv92ni0T_8CHGtDag" target="_BLANK">Nox' Spellenzolder</a> is a Dutch Youtuber giving reviews of boardgames and scoring them. Until now there is no way of getting a list of all scores and ranking. On special occations Nox' does a Top-50, but that's it.
+<a href="https://www.youtube.com/channel/UCtzMObnv92ni0T_8CHGtDag" target="_BLANK">Nox' Spellenzolder</a> is a Dutch Youtuber giving reviews of boardgames and scoring them. Until now there was no way of getting a list of all scores and ranking. On special occations Nox' does a Top-50, but that's it.
 
 This Python application gathers information about the boardgame and Nox' scores and saves the output as .csv. With the following header:
 
 ```code
-title;link;id;stars;score
+title;link;id;stars;score;date
 ```
 
 

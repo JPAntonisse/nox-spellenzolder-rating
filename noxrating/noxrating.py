@@ -68,7 +68,7 @@ Spellenzolder - Rating Extractor
         # Try to find a cache if exist
         if not self.ignore_cache:
             try:
-                with open('../cache/videos.pickle', 'rb') as handle:
+                with open('cache/videos.pickle', 'rb') as handle:
                     self.print('Cache found. Disable cache and use API? Use --ignore-cache')
                     return pickle.load(handle)
             except:
@@ -190,7 +190,7 @@ class DataExport:
         :param data:
         :param name:
         """
-        with open('../cache/' + name + '.pickle', 'wb') as handle:
+        with open('cache/' + name + '.pickle', 'wb') as handle:
             pickle.dump(data, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
     def load(self, name):
@@ -198,7 +198,7 @@ class DataExport:
 
         :rtype: object
         """
-        with open('../cache/' + name + '.pickle', 'rb') as handle:
+        with open('cache/' + name + '.pickle', 'rb') as handle:
             return pickle.load(handle)
 
     def exist(self, name):
@@ -207,7 +207,7 @@ class DataExport:
         :param name:
         :return:
         """
-        return os.path.isfile('../cache/' + name + '.pickle')
+        return os.path.isfile('cache/' + name + '.pickle')
 
 
 def main():

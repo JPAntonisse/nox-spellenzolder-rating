@@ -36,7 +36,7 @@ $ git clone https://github.com/JPAntonisse/nox-spellenzolder-rating.git
 $ cd noxrating
 
 # install the requirements
-$ python3 -m pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 

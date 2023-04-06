@@ -22,7 +22,7 @@ title;link;id;stars;score;date
 
 
 ## Dataset
-The scoring of Nox' boardgames will be shortly available on another Github Repo as a dataset in csv format.
+The scoring of Nox' boardgames are available on the Dataset repository: https://github.com/JPAntonisse/nox-spellenzolder
 
 
 
